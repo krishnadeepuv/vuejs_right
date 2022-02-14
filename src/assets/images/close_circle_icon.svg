@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="prefix__menu" width="37" height="37" viewBox="0 0 37 37">
+    <defs>
+        <style>
+            .prefix__cls-2{fill:none;stroke:#8090b5;stroke-linecap:round;stroke-width:2px}
+        </style>
+    </defs>
+    <g id="prefix__Ellipse_15" data-name="Ellipse 15" style="fill:rgba(128,144,181,.1);stroke:rgba(128,144,181,.35)">
+        <circle cx="18.5" cy="18.5" r="18.5" style="stroke:none"/>
+        <circle cx="18.5" cy="18.5" r="18" style="fill:none"/>
+    </g>
+    <g id="prefix__Group_1125" data-name="Group 1125">
+        <path id="prefix__Path_820" d="M14 0H0" class="prefix__cls-2" data-name="Path 820" transform="rotate(45 -9.9 23.9)"/>
+        <path id="prefix__Path_1791" d="M14 0H0" class="prefix__cls-2" data-name="Path 1791" transform="rotate(-45 35.847 -4.95)"/>
+    </g>
+</svg>

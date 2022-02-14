@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16.347" height="13.487" viewBox="0 0 16.347 13.487">
+    <defs>
+        <style>
+            .prefix__cls-1{fill:none;stroke:#08104d;stroke-linecap:round;stroke-width:2px}
+        </style>
+    </defs>
+    <g id="prefix__menu" transform="translate(-10.652 -11.461)">
+        <g id="prefix__Group_200" data-name="Group 200" transform="translate(12 13)">
+            <path id="prefix__Path_821" d="M6.523.639L0 0" class="prefix__cls-1" data-name="Path 821" transform="rotate(-50 5.454 2.294)"/>
+            <path id="prefix__Path_822" d="M6.523 0L0 .639" class="prefix__cls-1" data-name="Path 822" transform="rotate(50 -5.021 3.23)"/>
+            <path id="prefix__Path_820" d="M14 0H0" class="prefix__cls-1" data-name="Path 820" transform="translate(0 5.202)"/>
+        </g>
+    </g>
+</svg>

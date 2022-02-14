@@ -1,0 +1,445 @@
+.tagify {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 0;
+    cursor: text;
+    position: relative;
+    -webkit-transition: .1s;
+    -o-transition: .1s;
+    transition: .1s;
+}
+
+@-webkit-keyframes tags--bump {
+    30% {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+        color: #707070;
+    }
+}
+
+@keyframes tags--bump {
+    30% {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2)
+    }
+}
+
+.tagify:hover {
+    border-color: #ccc
+}
+
+.tagify[readonly] {
+    cursor: default
+}
+
+.tagify[readonly]>.tagify__input {
+    visibility: hidden;
+    width: 0;
+    margin: 5px 0
+}
+
+.tagify[readonly] .tagify__tag__removeBtn {
+    display: none
+}
+
+.tagify[readonly] .tagify__tag>div {
+    padding: .3em .5em
+}
+
+.tagify[readonly] .tagify__tag>div::before {
+    background: -webkit-linear-gradient(45deg, #d6d6d6 25%, transparent 25%, transparent 50%, #d6d6d6 50%, #d6d6d6 75%, transparent 75%, transparent) 0/5px 5px;
+    background: -o-linear-gradient(45deg, #d6d6d6 25%, transparent 25%, transparent 50%, #d6d6d6 50%, #d6d6d6 75%, transparent 75%, transparent) 0/5px 5px;
+    background: linear-gradient(45deg, #d6d6d6 25%, transparent 25%, transparent 50%, #d6d6d6 50%, #d6d6d6 75%, transparent 75%, transparent) 0/5px 5px;
+    -webkit-box-shadow: none;
+    box-shadow: none
+}
+
+.tagify+input, .tagify+textarea {
+    border: 0;
+    display: none
+}
+
+.tagify__tag {
+    display: inline-block;
+    margin: 5px 0 5px 5px;
+    position: relative;
+    z-index: 1;
+    cursor: default;
+    -webkit-transition: .13s ease-out;
+    -o-transition: .13s ease-out;
+    transition: .13s ease-out
+}
+
+.tagify__tag.tagify--editable>div::before {
+    -webkit-box-shadow: 0 0 0 2px #d3e2e2 inset!important;
+    box-shadow: 0 0 0 2px #d3e2e2 inset!important
+}
+
+.tagify__tag.tagify--editable.tagify--invalid>div::before {
+    -webkit-box-shadow: 0 0 0 2px #d39494 inset!important;
+    box-shadow: 0 0 0 2px #d39494 inset!important
+}
+
+.tagify__tag>div {
+    vertical-align: top;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    max-width: 100%;
+    padding: .3em .5em;
+    color: #fff;
+    border-radius: 6px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: .13s ease-out;
+    -o-transition: .13s ease-out;
+    transition: .13s ease-out;
+    padding-right: 1.8em;
+    background: #fa7b50;
+    border: none;
+}
+
+.tagify__tag>div>* {
+    white-space: nowrap;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    display: inline-block;
+    vertical-align: top
+}
+
+.tagify[aria-expanded="true"] {
+    position: relative;
+}
+
+.tagify[aria-expanded="true"]:before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 48px;
+    box-shadow: 0 9px 20px 0 #dbd0e5;
+    top: -38px;
+    z-index: 10;
+    border-radius: 20px 20px 0 0;
+}
+
+.tagify__tag>div>[contenteditable] {
+    outline: 0
+}
+
+.tagify__tag:hover:not([readonly]) div::before {
+    top: -2px;
+    right: -2px;
+    bottom: -2px;
+    left: -2px;
+    -webkit-box-shadow: 0 0 0 16px #d3e2e2 inset;
+    box-shadow: 0 0 0 16px #d3e2e2 inset
+}
+
+.tagify__tag.tagify--noAnim {
+    -webkit-animation: none;
+    animation: none
+}
+
+.tagify__tag.tagify--hide {
+    width: 0!important;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+    opacity: 0;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+    pointer-events: none
+}
+
+.tagify__tag.tagify--mark div::before {
+    -webkit-animation: none;
+    animation: none
+}
+
+.tagify__tag.tagify--notAllowed div>span {
+    opacity: .5
+}
+
+.tagify__tag.tagify--notAllowed div::before {
+    -webkit-box-shadow: 0 0 0 20px rgba(211, 148, 148, .44) inset!important;
+    box-shadow: 0 0 0 20px rgba(211, 148, 148, .44) inset!important;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s
+}
+
+.tagify__tag[readonly] .tagify__tag__removeBtn {
+    display: none
+}
+
+.tagify__tag[readonly]>div {
+    padding: .3em .5em
+}
+
+.tagify__tag[readonly]>div::before {
+    background: -webkit-linear-gradient(45deg, #d6d6d6 25%, transparent 25%, transparent 50%, #d6d6d6 50%, #d6d6d6 75%, transparent 75%, transparent) 0/5px 5px;
+    background: -o-linear-gradient(45deg, #d6d6d6 25%, transparent 25%, transparent 50%, #d6d6d6 50%, #d6d6d6 75%, transparent 75%, transparent) 0/5px 5px;
+    background: linear-gradient(45deg, #d6d6d6 25%, transparent 25%, transparent 50%, #d6d6d6 50%, #d6d6d6 75%, transparent 75%, transparent) 0/5px 5px;
+    -webkit-box-shadow: none;
+    box-shadow: none
+}
+
+.tagify__tag__removeBtn {
+    font: 14px/16px Serif;
+    width: 14px;
+    height: 14px;
+    text-align: center;
+    border-radius: 50px;
+    position: absolute;
+    z-index: 1;
+    right: calc(.5em - 2px);
+    top: 50%;
+    cursor: pointer;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transition: .2s ease-out;
+    -o-transition: .2s ease-out;
+    transition: .2s ease-out
+}
+
+.tagify__tag__removeBtn::after {
+    content: "";
+    background: url(../images/close-orange.svg) no-repeat;
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    background-size: 10px;
+    top: 2px;
+    left: 0;
+}
+
+.tagify__tag__removeBtn:hover {
+    color: #fff;
+}
+
+/*.tagify__tag__removeBtn:hover+div>span{opacity:.5}*/
+
+.tagify__tag__removeBtn:hover+div::before {
+    -webkit-box-shadow: 0 0 0 20px rgba(211, 148, 148, .3) inset!important;
+    box-shadow: 0 0 0 20px rgba(211, 148, 148, .3) inset!important;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s
+}
+
+.tagify__input {
+    display: block;
+    min-width: 100%;
+    margin: 0 5px;
+    padding: 0.75em 1.5em;
+    position: relative;
+    background: none;
+    font-weight: 300;
+    font-size: 18px;
+    border-radius: 20px;
+    border: 1px solid rgba(128, 144, 181, 0.4);
+}
+
+.tagify__input[data-placeholder] {
+    font-size: 12px;
+}
+
+.tagify__input:empty::before {
+    -webkit-transition: .2s ease-out;
+    -o-transition: .2s ease-out;
+    transition: .2s ease-out;
+    opacity: .5;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+}
+
+.tagify__input:focus {
+    outline: 0;
+}
+
+.tagify__input--outside:focus {
+    box-shadow: 0 4px 5px 0 rgba(219, 208, 229, 0.54);
+}
+
+.tagify__input:focus::before {
+    -webkit-transition: .2s ease-out;
+    -o-transition: .2s ease-out;
+    transition: .2s ease-out;
+    opacity: 0;
+    -webkit-transform: translate(0, -15px);
+    -ms-transform: translate(0, -15px);
+    transform: translate(0, -15px);
+    display: none;
+}
+
+@supports (-moz-appearance:none) {
+    .tagify__input:focus::before {
+        display: none
+    }
+}
+
+.tagify__input:focus:empty::before {
+    -webkit-transition: .2s ease-out;
+    -o-transition: .2s ease-out;
+    transition: .2s ease-out;
+    opacity: 0;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: translate(0, -15px);
+    display: none;
+}
+
+@supports (-moz-appearance:none) {
+    .tagify__input:focus:empty::before {
+        display: inline-block
+    }
+}
+
+.tagify__input::before {
+    content: attr(data-placeholder);
+    line-height: 1.8;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    color: #000;
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0;
+    width: 100%;
+}
+
+@supports (-moz-appearance:none) {
+    .tagify__input:focus:empty::before {
+        display: inline-block
+    }
+}
+
+.tagify__input::before {
+    content: attr(data-placeholder);
+    line-height: inherit;
+    position: relative
+}
+
+.tagify__input::after {
+    content: attr(data-suggest);
+    color: #000;
+    opacity: .3;
+    pointer-events: none
+}
+
+.tagify__input .tagify__tag {
+    margin: 0 2.5px
+}
+
+.tagify__input .tagify__tag>div {
+    padding-top: 0;
+    padding-bottom: 0
+}
+
+.tagify__input .tagify__tag>div::before {
+    top: -3px;
+    bottom: -3px
+}
+
+.tagify__input .tagify__tag:hover:not([readonly])>div::before {
+    top: -3px;
+    bottom: -3px;
+    left: 0;
+    right: 0
+}
+
+.tagify--mix .tagify__input {
+    padding: 5px;
+    margin: 0;
+    width: 100%;
+    height: 100%
+}
+
+.tagify__dropdown {
+    position: absolute;
+    z-index: 9;
+    background: #fff;
+    max-height: 300px;
+    overflow: auto;
+    border: 1px solid #fff;
+    -webkit-box-shadow: 0 9px 20px 0 #dbd0e5;
+    box-shadow: 0 9px 20px 0 #dbd0e5;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 0 0 20px 20px;
+    color: #08104d;
+    font-size: 0.9em;
+}
+
+.tagify__dropdown__item {
+    box-sizing: inherit;
+    padding: .5em 1em;
+    margin: 5px 2px;
+    cursor: pointer;
+    border-radius: 20px 0 0 20px;
+    position: relative;
+}
+
+.tagify__dropdown__item--active {
+    background: #fff
+}
+
+.tagify__dropdown__item:active {
+    background: #f2f2f2;
+}
+
+.tagify__dropdown__item:hover {
+    background: rgba(250, 124, 80, 0.1);
+    color: #fa7c50;
+}
+
+.tagify__input--outside {
+    /* background: url(../images/search-magnifier-orange.svg) no-repeat right center; */
+    background-size: 20px;
+    padding-right: 30px;
+    margin: 0;
+}
+
+.tagify.inline-tags .tagify__input {
+    border: none;
+    display: inline-flex;
+    min-width: 100px !important;
+    padding: 1em 1.5em;
+}
+
+.tagify.inline-tags {
+    border: 1px solid rgba(128, 144, 181, 0.4);
+    border-radius: 20px;
+}
+
+.tagify.inline-tags .tagify__tag>div, .tagify__tag>div {
+    background: rgba(250, 124, 80, 0.1);
+    color: #fa7c50;
+    font-size: 0.8em !important;
+    border-radius: 20px;
+    padding: 0.5em 2.2em 0.5em 1em;
+    border: 1px solid;
+}
+
+.tagify.tags_outside {
+    padding-top: 0.5em;
+}

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="prefix__save" width="16.283" height="16.282" viewBox="0 0 16.283 16.282">
+    <defs>
+        <style>
+            .prefix__cls-1{fill:#fa7c50}
+        </style>
+    </defs>
+    <g id="prefix__Group_1269" data-name="Group 1269">
+        <g id="prefix__Group_1268" data-name="Group 1268">
+            <path id="prefix__Path_2155" d="M16.108 3.947L12.335.174A.6.6 0 0 0 11.914 0H.6a.6.6 0 0 0-.6.6v15.087a.6.6 0 0 0 .6.6h15.087a.6.6 0 0 0 .6-.6V4.368a.6.6 0 0 0-.179-.421zM4.964 1.191h6.354v3.525H4.964zm7.771 13.9H3.547v-5.012h9.188zm2.356 0h-1.165V9.483a.6.6 0 0 0-.6-.6H2.952a.6.6 0 0 0-.6.6v5.608H1.191v-13.9h2.582v4.12a.6.6 0 0 0 .6.6h7.546a.6.6 0 0 0 .6-.6V2.034L15.1 4.615z" class="prefix__cls-1" data-name="Path 2155"/>
+        </g>
+    </g>
+    <g id="prefix__Group_1271" data-name="Group 1271" transform="translate(9.247 1.75)">
+        <g id="prefix__Group_1270" data-name="Group 1270">
+            <path id="prefix__Path_2156" d="M291.378 55.015a.6.6 0 0 0-.6.6v1.217a.6.6 0 0 0 1.191 0v-1.221a.6.6 0 0 0-.591-.596z" class="prefix__cls-1" data-name="Path 2156" transform="translate(-290.782 -55.015)"/>
+        </g>
+    </g>
+</svg>
