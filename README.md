@@ -1,1 +1,1 @@
-This VueJS project (SPA) with VueX, CharJS, filters, datatables.js 
+VueJS project (SPA) with VueX, CharJS, filters, datatables.js 
